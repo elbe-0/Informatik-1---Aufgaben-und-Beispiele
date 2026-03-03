@@ -11,15 +11,17 @@ Die Studierenden sind IT-Notfallteam der **MotoTec GmbH**, einer Autofabrik nach
 **Aufgaben-Notebook:**
 1. **Briefing** (Markdown, 3-5 Saetze): Lage in der Fabrik
 2. **Stakeholder-Dialog** (kursiv/zitiert): Konkrete Aufgabe und Motivation
-3. **Aufgabe**: Programmieraufgabe im Fabrik-Kontext
-4. **Leere Code-Zelle**: Platz fuer die Loesung der Studierenden
+3. **Beispiele** (falls im Original vorhanden): Lauffähige Code-Beispiele im Fabrik-Kontext, die die neuen Konzepte vor der Aufgabe demonstrieren. Werden aus dem Legacy-Notebook übernommen und an den MotoTec-Kontext angepasst. Studierende führen diese Zellen aus und sehen das Ergebnis, bevor sie selbst Code schreiben.
+4. **Aufgabe**: Programmieraufgabe im Fabrik-Kontext
+5. **Leere Code-Zelle**: Platz fuer die Loesung der Studierenden
 
-**Loesungs-Notebook (`_Lsg`):**
+**Loesungs-Notebook (`_Loesung`):**
 1. **Briefing** (identisch zur Aufgabe)
 2. **Stakeholder-Dialog** (identisch zur Aufgabe)
-3. **Aufgabe** (identisch zur Aufgabe)
-4. **Loesungscode**: Vollstaendig kommentierte Musterloesung
-5. **Debriefing** (nur hier, nicht in der Aufgabe): Der Stakeholder kommentiert das Ergebnis
+3. **Beispiele** (identisch zur Aufgabe, falls vorhanden)
+4. **Aufgabe** (identisch zur Aufgabe)
+5. **Loesungscode**: Vollstaendig kommentierte Musterloesung
+6. **Debriefing** (nur hier, nicht in der Aufgabe): Der Stakeholder kommentiert das Ergebnis
 
 ### Format
 
@@ -27,7 +29,7 @@ Alle Aufgaben, Beispiele und Loesungen werden als **Jupyter Notebooks (.ipynb)**
 
 ### Loesungs-Notebooks
 
-Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstellt (analog zu den bestehenden `_Lsg`-Notebooks). Die Loesung enthaelt denselben narrativen Rahmen (Briefing, Stakeholder-Dialog) plus vollstaendig kommentierte Musterloesung.
+Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstellt (analog zu den bestehenden Loesungs-Notebooks im Original). Die Loesung enthaelt denselben narrativen Rahmen (Briefing, Stakeholder-Dialog) plus vollstaendig kommentierte Musterloesung.
 
 ### Notebook-Granularitaet
 
@@ -35,7 +37,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 
 ### Dateinamen-Konvention
 
-**Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `{NN}_{Story}:{Thema}/`:
+**Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `{KK}_{Story}:{Thema}/`:
 
 - `01_Blackout:Einfuehrung_IDE/`
 - `02_Fehlkalibrierung:Variablen_Datentypen/`
@@ -51,6 +53,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `N` = laufende Aufgabennummer innerhalb des Kapitels (1, 2, ... 12)
 - `Thema` = Kurzbezeichnung der Aufgabe in Snake_Case
 - `_Aufgabe` / `_Loesung` als Suffix (sortiert alphabetisch korrekt: A vor L)
+- Sonderfall Klausurvorbereitung: `K_{N}_{Thema}_Aufgabe.ipynb` (Präfix `K` statt Kapitelnummer)
 
 **Beispiele:**
 
@@ -97,9 +100,10 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 **Struktur-Checks (Aufgaben-Notebook):**
 
 - [ ] Dateiname folgt Konvention (`{KK}_{N}_{Thema}_Aufgabe.ipynb`)
-- [ ] Liegt im korrekten Kapitel-Ordner (`{NN}_{Story}:{Thema}/`)
+- [ ] Liegt im korrekten Kapitel-Ordner (`{KK}_{Story}:{Thema}/`)
 - [ ] Briefing vorhanden (Markdown, 3-5 Saetze, Fabrik-Situation)
 - [ ] Stakeholder-Dialog vorhanden (kursiv/zitiert, konkrete Aufgabe + Motivation)
+- [ ] Beispiele vorhanden (falls im Original lauffähige Beispiele vor der Aufgabe existieren: im Fabrik-Kontext angepasst, zwischen Stakeholder-Dialog und Aufgabe)
 - [ ] Aufgabe klar formuliert (Programmieraufgabe im Fabrik-Kontext)
 - [ ] Leere Code-Zelle mit Scaffolding-Kommentaren
 - [ ] KEIN Debriefing (Debriefing gehoert nur in die Loesung)
@@ -118,6 +122,7 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 **Legacy-Vergleich (Pflicht für jede Aufgabe):**
 
 - [ ] Original-Notebook gelesen und verglichen
+- [ ] **Einführungsbeispiele übernommen:** Wenn das Original lauffähige Beispiele vor der Aufgabe enthält, müssen diese (im Fabrik-Kontext angepasst) als eigene Code-Zellen zwischen Stakeholder-Dialog und Aufgabe stehen
 - [ ] Erklärungsqualität mindestens gleichwertig (gleich gut oder besser als Original)
 - [ ] Alle fachlichen Konzepte des Originals vollständig abgedeckt
 - [ ] Schwierigkeitsgrad und Progression vergleichbar
@@ -315,7 +320,7 @@ Alle 11 Klausuraufgaben mit vollstaendigem Mapping:
 | **Dr. Lena Voss** | Qualitaetsmanagerin | Praezise, analytisch, duldet keine Schlamperei | Kap 2, 3 (QM), 4 (Sensoren), 6 |
 | **Tarek Oezdal** | Schichtleiter Produktion | Hands-on, ungeduldig, will dass Dinge laufen | Kap 3, Klausur |
 | **Juergen Brandt** | Lagerleiter | Ueberfordert, genervt ueber Chaos, aber herzlich | Kap 4 |
-| **Marco Petri** | Einkaufsleiter | Zahlenmensch, pragmatisch | Kap 3 (Material), Kap 4 (Zulieferer) |
+| **Marco Petri** | Einkaufsleiter | Zahlenmensch, pragmatisch | Kap 3 (Material), Kap 4 (Zulieferer), Klausur |
 | **Aylin Demir** | CFO / Finanzchefin | Nuechtern, ergebnisorientiert, Druck von oben | Kap 3 (Ruecklagen), Kap 6 |
 | **Thomas Wegner** | Geschaeftsfuehrer | Visionaer, motivierend, steht unter Druck | Kap 5 (Strategie), Kap 6, Klausur |
 
@@ -336,91 +341,91 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 1.1 | Bootsequenz | `01_Bootsequenz` | [ ] | [ ] | [ ] |
-| 1.2 | Stromversorgung | `02_Stromversorgung` | [ ] | [ ] | [ ] |
-| 1.3 | Statusanzeige | `03_Statusanzeige` | [ ] | [ ] | [ ] |
-| 1.4 | System-Dashboard | `04_System_Dashboard` | [ ] | [ ] | [ ] |
+| 1.1 | Bootsequenz | `01_1_Bootsequenz` | [ ] | [ ] | [ ] |
+| 1.2 | Stromversorgung | `01_2_Stromversorgung` | [ ] | [ ] | [ ] |
+| 1.3 | Statusanzeige | `01_3_Statusanzeige` | [ ] | [ ] | [ ] |
+| 1.4 | System-Dashboard | `01_4_System_Dashboard` | [ ] | [ ] | [ ] |
 
 ### Kapitel 2: Fehlkalibrierung (9 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 2.1 | Maschinendiagramm | `01_Maschinendiagramm` | [ ] | [ ] | [ ] |
-| 2.2 | Sensortypen | `02_Sensortypen` | [ ] | [ ] | [ ] |
-| 2.3 | Maschinenpass | `03_Maschinenpass` | [ ] | [ ] | [ ] |
-| 2.4 | Sensordaten reparieren | `04_Sensordaten_reparieren` | [ ] | [ ] | [ ] |
-| 2.5 | Werkzeugkasten (Demo) | `05_Werkzeugkasten` | [ ] | [ ] | [ ] |
-| 2.6 | QR-Code Maschinenetikett | `06_QR_Code_Maschinenetikett` | [ ] | [ ] | [ ] |
-| 2.7 | QR-Code Pruefpause | `07_QR_Code_Pruefpause` | [ ] | [ ] | [ ] |
-| 2.8 | QR-Code Zeitstempel | `08_QR_Code_Zeitstempel` | [ ] | [ ] | [ ] |
-| 2.9 | Stresstest | `09_Stresstest` | [ ] | [ ] | [ ] |
+| 2.1 | Maschinendiagramm | `02_1_Maschinendiagramm` | [ ] | [ ] | [ ] |
+| 2.2 | Sensortypen | `02_2_Sensortypen` | [ ] | [ ] | [ ] |
+| 2.3 | Maschinenpass | `02_3_Maschinenpass` | [ ] | [ ] | [ ] |
+| 2.4 | Sensordaten reparieren | `02_4_Sensordaten_reparieren` | [ ] | [ ] | [ ] |
+| 2.5 | Werkzeugkasten (Demo) | `02_5_Werkzeugkasten` | [ ] | [ ] | [ ] |
+| 2.6 | QR-Code Maschinenetikett | `02_6_QR_Code_Maschinenetikett` | [ ] | [ ] | [ ] |
+| 2.7 | QR-Code Pruefpause | `02_7_QR_Code_Pruefpause` | [ ] | [ ] | [ ] |
+| 2.8 | QR-Code Zeitstempel | `02_8_QR_Code_Zeitstempel` | [ ] | [ ] | [ ] |
+| 2.9 | Stresstest | `02_9_Stresstest` | [ ] | [ ] | [ ] |
 
 ### Kapitel 3: Fertigungsstrasse (12 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 3.1 | Fabrikzugangssystem | `01_Fabrikzugangssystem` | [ ] | [ ] | [ ] |
-| 3.2 | Seriennummer-Pruefung | `02_Seriennummer_Pruefung` | [ ] | [ ] | [ ] |
-| 3.3 | Fehldiagnose Sortiermaschine | `03_Fehldiagnose_Sortiermaschine` | [ ] | [ ] | [ ] |
-| 3.4 | Roboterarm-Steuerung | `04_Roboterarm_Steuerung` | [ ] | [ ] | [ ] |
-| 3.5 | Diagnose-Automat | `05_Diagnose_Automat` | [ ] | [ ] | [ ] |
-| 3.6 | Materialkalkulator | `06_Materialkalkulator` | [ ] | [ ] | [ ] |
-| 3.7 | Werkzeug-Duell | `07_Werkzeug_Duell` | [ ] | [ ] | [ ] |
-| 3.8 | Fliessband-Steuerung | `08_Fliessband_Steuerung` | [ ] | [ ] | [ ] |
-| 3.9 | Schichtplanung | `09_Schichtplanung` | [ ] | [ ] | [ ] |
-| 3.10 | Halbierungsmaschine | `10_Halbierungsmaschine` | [ ] | [ ] | [ ] |
-| 3.11 | Ruecklagen-Rechner | `11_Ruecklagen_Rechner` | [ ] | [ ] | [ ] |
-| 3.12 | Notfall-Patch | `12_Notfall_Patch` | [ ] | [ ] | [ ] |
+| 3.1 | Fabrikzugangssystem | `03_1_Fabrikzugangssystem` | [ ] | [ ] | [ ] |
+| 3.2 | Seriennummer-Pruefung | `03_2_Seriennummer_Pruefung` | [ ] | [ ] | [ ] |
+| 3.3 | Fehldiagnose Sortiermaschine | `03_3_Fehldiagnose_Sortiermaschine` | [ ] | [ ] | [ ] |
+| 3.4 | Roboterarm-Steuerung | `03_4_Roboterarm_Steuerung` | [ ] | [ ] | [ ] |
+| 3.5 | Diagnose-Automat | `03_5_Diagnose_Automat` | [ ] | [ ] | [ ] |
+| 3.6 | Materialkalkulator | `03_6_Materialkalkulator` | [ ] | [ ] | [ ] |
+| 3.7 | Werkzeug-Duell | `03_7_Werkzeug_Duell` | [ ] | [ ] | [ ] |
+| 3.8 | Fliessband-Steuerung | `03_8_Fliessband_Steuerung` | [ ] | [ ] | [ ] |
+| 3.9 | Schichtplanung | `03_9_Schichtplanung` | [ ] | [ ] | [ ] |
+| 3.10 | Halbierungsmaschine | `03_10_Halbierungsmaschine` | [ ] | [ ] | [ ] |
+| 3.11 | Ruecklagen-Rechner | `03_11_Ruecklagen_Rechner` | [ ] | [ ] | [ ] |
+| 3.12 | Notfall-Patch | `03_12_Notfall_Patch` | [ ] | [ ] | [ ] |
 
 ### Kapitel 4: Lagerchaos (8 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 4.1 | Etiketten reparieren | `01_Etiketten_reparieren` | [ ] | [ ] | [ ] |
-| 4.2 | Teilelager digitalisieren | `02_Teilelager_digitalisieren` | [ ] | [ ] | [ ] |
-| 4.3 | Teilelager bearbeiten | `03_Teilelager_bearbeiten` | [ ] | [ ] | [ ] |
-| 4.4 | Teilelager durchsuchen | `04_Teilelager_durchsuchen` | [ ] | [ ] | [ ] |
-| 4.5 | Lagerhalle Raster | `05_Lagerhalle_Raster` | [ ] | [ ] | [ ] |
-| 4.6 | Teil suchen | `06_Teil_suchen` | [ ] | [ ] | [ ] |
-| 4.7 | Teil umlagern | `07_Teil_umlagern` | [ ] | [ ] | [ ] |
-| 4.8 | NumPy Sensor-Matrix | `08_NumPy_Sensor_Matrix` | [ ] | [ ] | [ ] |
+| 4.1 | Etiketten reparieren | `04_1_Etiketten_reparieren` | [ ] | [ ] | [ ] |
+| 4.2 | Teilelager digitalisieren | `04_2_Teilelager_digitalisieren` | [ ] | [ ] | [ ] |
+| 4.3 | Teilelager bearbeiten | `04_3_Teilelager_bearbeiten` | [ ] | [ ] | [ ] |
+| 4.4 | Teilelager durchsuchen | `04_4_Teilelager_durchsuchen` | [ ] | [ ] | [ ] |
+| 4.5 | Lagerhalle Raster | `04_5_Lagerhalle_Raster` | [ ] | [ ] | [ ] |
+| 4.6 | Teil suchen | `04_6_Teil_suchen` | [ ] | [ ] | [ ] |
+| 4.7 | Teil umlagern | `04_7_Teil_umlagern` | [ ] | [ ] | [ ] |
+| 4.8 | NumPy Sensor-Matrix | `04_8_NumPy_Sensor_Matrix` | [ ] | [ ] | [ ] |
 
 ### Kapitel 5: Code-Review (6 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 5.1 | Roboterarm-Fehler | `01_Roboterarm_Fehler` | [ ] | [ ] | [ ] |
-| 5.2 | Ablaufverfolgung | `02_Ablaufverfolgung` | [ ] | [ ] | [ ] |
-| 5.3 | Materialkalkulator 2.0 | `03_Materialkalkulator_2_0` | [ ] | [ ] | [ ] |
-| 5.4 | Fehlercodes entschluesseln | `04_Fehlercodes_entschluesseln` | [ ] | [ ] | [ ] |
-| 5.5 | Schichtprotokoll | `05_Schichtprotokoll` | [ ] | [ ] | [ ] |
-| 5.6 | Mysterioeser Bug | `06_Mysterioeser_Bug` | [ ] | [ ] | [ ] |
+| 5.1 | Roboterarm-Fehler | `05_1_Roboterarm_Fehler` | [ ] | [ ] | [ ] |
+| 5.2 | Ablaufverfolgung | `05_2_Ablaufverfolgung` | [ ] | [ ] | [ ] |
+| 5.3 | Materialkalkulator 2.0 | `05_3_Materialkalkulator_2_0` | [ ] | [ ] | [ ] |
+| 5.4 | Fehlercodes entschluesseln | `05_4_Fehlercodes_entschluesseln` | [ ] | [ ] | [ ] |
+| 5.5 | Schichtprotokoll | `05_5_Schichtprotokoll` | [ ] | [ ] | [ ] |
+| 5.6 | Mysterioeser Bug | `05_6_Mysterioeser_Bug` | [ ] | [ ] | [ ] |
 
 ### Kapitel 6: Investoren-Pitch (5 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 6.1 | Qualitaetsbericht | `01_Qualitaetsbericht` | [ ] | [ ] | [ ] |
-| 6.2 | Notfall-Kodierung | `02_Notfall_Kodierung` | [ ] | [ ] | [ ] |
-| 6.3 | Produktionsdaten Pandas | `03_Produktionsdaten_Pandas` | [ ] | [ ] | [ ] |
-| 6.4 | Investor-Dashboard Plotly | `04_Investor_Dashboard_Plotly` | [ ] | [ ] | [ ] |
-| 6.5 | Produktions-Dashboard | `05_Produktions_Dashboard` | [ ] | [ ] | [ ] |
+| 6.1 | Qualitaetsbericht | `06_1_Qualitaetsbericht` | [ ] | [ ] | [ ] |
+| 6.2 | Notfall-Kodierung | `06_2_Notfall_Kodierung` | [ ] | [ ] | [ ] |
+| 6.3 | Produktionsdaten Pandas | `06_3_Produktionsdaten_Pandas` | [ ] | [ ] | [ ] |
+| 6.4 | Investor-Dashboard Plotly | `06_4_Investor_Dashboard_Plotly` | [ ] | [ ] | [ ] |
+| 6.5 | Produktions-Dashboard | `06_5_Produktions_Dashboard` | [ ] | [ ] | [ ] |
 
 ### Klausurvorbereitung (11 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| K-1 | Datentypen | `01_Datentypen` | [ ] | [ ] | [ ] |
-| K-2 | Fehler finden | `02_Fehler_finden` | [ ] | [ ] | [ ] |
-| K-3 | Algorithmus | `03_Algorithmus` | [ ] | [ ] | [ ] |
-| K-4 | Bitkodierung | `04_Bitkodierung` | [ ] | [ ] | [ ] |
-| K-5 | Von-Neumann | `05_Von_Neumann` | [ ] | [ ] | [ ] |
-| K-6 | Redundante Bedingung | `06_Redundante_Bedingung` | [ ] | [ ] | [ ] |
-| K-7 | Flussdiagramm | `07_Flussdiagramm` | [ ] | [ ] | [ ] |
-| K-8 | Zahlensysteme | `08_Zahlensysteme` | [ ] | [ ] | [ ] |
-| K-9 | Chargen-Nummern | `09_Chargen_Nummern` | [ ] | [ ] | [ ] |
-| K-10 | Fehlercode erraten | `10_Fehlercode_erraten` | [ ] | [ ] | [ ] |
-| K-11 | Materialzuschnitt | `11_Materialzuschnitt` | [ ] | [ ] | [ ] |
+| K-1 | Datentypen | `K_1_Datentypen` | [ ] | [ ] | [ ] |
+| K-2 | Fehler finden | `K_2_Fehler_finden` | [ ] | [ ] | [ ] |
+| K-3 | Algorithmus | `K_3_Algorithmus` | [ ] | [ ] | [ ] |
+| K-4 | Bitkodierung | `K_4_Bitkodierung` | [ ] | [ ] | [ ] |
+| K-5 | Von-Neumann | `K_5_Von_Neumann` | [ ] | [ ] | [ ] |
+| K-6 | Redundante Bedingung | `K_6_Redundante_Bedingung` | [ ] | [ ] | [ ] |
+| K-7 | Flussdiagramm | `K_7_Flussdiagramm` | [ ] | [ ] | [ ] |
+| K-8 | Zahlensysteme | `K_8_Zahlensysteme` | [ ] | [ ] | [ ] |
+| K-9 | Chargen-Nummern | `K_9_Chargen_Nummern` | [ ] | [ ] | [ ] |
+| K-10 | Fehlercode erraten | `K_10_Fehlercode_erraten` | [ ] | [ ] | [ ] |
+| K-11 | Materialzuschnitt | `K_11_Materialzuschnitt` | [ ] | [ ] | [ ] |
 
 ---
 
