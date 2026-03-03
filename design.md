@@ -27,14 +27,14 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 
 ### Dateinamen-Konvention
 
-**Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `Kap{X}_{Kurztitel}/`:
+**Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `{NN}_{Story}:{Thema}/`:
 
-- `Kap1_Blackout/`
-- `Kap2_Fehlkalibrierung/`
-- `Kap3_Fertigungsstrasse/`
-- `Kap4_Lagerchaos/`
-- `Kap5_Code_Review/`
-- `Kap6_Investoren_Pitch/`
+- `01_Blackout:Einfuehrung_IDE/`
+- `02_Fehlkalibrierung:Variablen_Datentypen/`
+- `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/`
+- `04_Lagerchaos:Strings_Listen/`
+- `05_Code_Review:Funktionale_Programmierung/`
+- `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/`
 - `Klausurvorbereitung/`
 
 **Dateinamen:** `{NN}_{Thema}.ipynb` (Aufgabe) bzw. `{NN}_{Thema}_Lsg.ipynb` (Loesung).
@@ -46,18 +46,23 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 
 | Aufgabe | Dateiname |
 |---|---|
-| 1.1 | `Kap1_Blackout/01_Bootsequenz.ipynb` |
-| 1.1 Lsg | `Kap1_Blackout/01_Bootsequenz_Lsg.ipynb` |
-| 2.5 | `Kap2_Fehlkalibrierung/05_Werkzeugkasten.ipynb` |
-| 3.6 | `Kap3_Fertigungsstrasse/06_Materialkalkulator.ipynb` |
-| 4.8 | `Kap4_Lagerchaos/08_NumPy_Sensor_Matrix.ipynb` |
-| 5.3 | `Kap5_Code_Review/03_Materialkalkulator_2_0.ipynb` |
-| 6.4 | `Kap6_Investoren_Pitch/04_Investor_Dashboard_Plotly.ipynb` |
+| 1.1 | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz.ipynb` |
+| 1.1 Lsg | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz_Lsg.ipynb` |
+| 2.5 | `02_Fehlkalibrierung:Variablen_Datentypen/05_Werkzeugkasten.ipynb` |
+| 3.6 | `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/06_Materialkalkulator.ipynb` |
+| 4.8 | `04_Lagerchaos:Strings_Listen/08_NumPy_Sensor_Matrix.ipynb` |
+| 5.3 | `05_Code_Review:Funktionale_Programmierung/03_Materialkalkulator_2_0.ipynb` |
+| 6.4 | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/04_Investor_Dashboard_Plotly.ipynb` |
 | K-1 | `Klausurvorbereitung/01_Datentypen.ipynb` |
 
 ### Original-Aufgaben (Legacy)
 
 Die bisherigen Aufgaben, auf denen dieses Refactoring basiert: `/Users/ostfalia/vs-code/Informatik-I----Python-Beispiele/`
+
+### Sprachkonventionen
+
+- **Sie-Form:** Alle Aufgabentexte, Hinweise und Anleitungen verwenden die hoefliche Anrede ("Schreiben Sie...", "Verwenden Sie...", nicht "Schreib..." oder "Verwende...")
+- **Kein Schwierigkeitsgrad in Notebooks:** Die Schwierigkeitsangabe (1/5 etc.) dient nur der internen Planung im Design-Dokument und erscheint NICHT in den Notebooks
 
 ### Akzeptanzkriterien
 
@@ -81,7 +86,7 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 **Struktur-Checks:**
 
 - [ ] Dateiname folgt Konvention (`{NN}_{Thema}.ipynb`)
-- [ ] Liegt im korrekten Kapitel-Ordner (`Kap{X}_{Kurztitel}/`)
+- [ ] Liegt im korrekten Kapitel-Ordner (`{NN}_{Story}:{Thema}/`)
 - [ ] Briefing vorhanden (Markdown, 3-5 Saetze, Fabrik-Situation)
 - [ ] Stakeholder-Dialog vorhanden (kursiv/zitiert, konkrete Aufgabe + Motivation)
 - [ ] Aufgabe klar formuliert (Programmieraufgabe im Fabrik-Kontext)
@@ -93,6 +98,8 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 - [ ] Schwierigkeitsgrad passt zum Kapitel (siehe Kapitel-Header)
 - [ ] Stakeholder passt zur Situation (siehe Story-Arc und Stakeholder-Cast)
 - [ ] Keine Konzepte verwendet die erst in spaeteren Kapiteln eingefuehrt werden
+- [ ] Sie-Form durchgehend verwendet (keine Du-Form in Aufgabentexten/Hinweisen)
+- [ ] Kein Schwierigkeitsgrad im Notebook sichtbar
 - [ ] Code-Zellen sind ausfuehrbar (kein `ImportError`, kein `SyntaxError`)
 
 **Loesung-Checks (nur fuer `_Lsg`-Notebooks):**
