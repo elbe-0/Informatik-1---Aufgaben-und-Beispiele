@@ -45,9 +45,10 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/`
 - `Klausurvorbereitung/`
 
-**Dateinamen:** `{NN}_{Thema}_Aufgabe.ipynb` bzw. `{NN}_{Thema}_Loesung.ipynb`.
+**Dateinamen:** `{KK}_{N}_{Thema}_Aufgabe.ipynb` bzw. `{KK}_{N}_{Thema}_Loesung.ipynb`.
 
-- `NN` = zweistellige laufende Nummer innerhalb des Kapitels (01, 02, ... 12)
+- `KK` = zweistellige Kapitelnummer (01-06)
+- `N` = laufende Aufgabennummer innerhalb des Kapitels (1, 2, ... 12)
 - `Thema` = Kurzbezeichnung der Aufgabe in Snake_Case
 - `_Aufgabe` / `_Loesung` als Suffix (sortiert alphabetisch korrekt: A vor L)
 
@@ -55,14 +56,14 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 
 | Aufgabe | Dateiname |
 |---|---|
-| 1.1 Aufgabe | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz_Aufgabe.ipynb` |
-| 1.1 Loesung | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz_Loesung.ipynb` |
-| 2.5 Aufgabe | `02_Fehlkalibrierung:Variablen_Datentypen/05_Werkzeugkasten_Aufgabe.ipynb` |
-| 3.6 Aufgabe | `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/06_Materialkalkulator_Aufgabe.ipynb` |
-| 4.8 Aufgabe | `04_Lagerchaos:Strings_Listen/08_NumPy_Sensor_Matrix_Aufgabe.ipynb` |
-| 5.3 Aufgabe | `05_Code_Review:Funktionale_Programmierung/03_Materialkalkulator_2_0_Aufgabe.ipynb` |
-| 6.4 Aufgabe | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/04_Investor_Dashboard_Plotly_Aufgabe.ipynb` |
-| K-1 Aufgabe | `Klausurvorbereitung/01_Datentypen_Aufgabe.ipynb` |
+| 1.1 Aufgabe | `01_Blackout:Einfuehrung_IDE/01_1_Bootsequenz_Aufgabe.ipynb` |
+| 1.1 Loesung | `01_Blackout:Einfuehrung_IDE/01_1_Bootsequenz_Loesung.ipynb` |
+| 2.5 Aufgabe | `02_Fehlkalibrierung:Variablen_Datentypen/02_5_Werkzeugkasten_Aufgabe.ipynb` |
+| 3.6 Aufgabe | `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/03_6_Materialkalkulator_Aufgabe.ipynb` |
+| 4.8 Aufgabe | `04_Lagerchaos:Strings_Listen/04_8_NumPy_Sensor_Matrix_Aufgabe.ipynb` |
+| 5.3 Aufgabe | `05_Code_Review:Funktionale_Programmierung/05_3_Materialkalkulator_2_0_Aufgabe.ipynb` |
+| 6.4 Aufgabe | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/06_4_Investor_Dashboard_Plotly_Aufgabe.ipynb` |
+| K-1 Aufgabe | `Klausurvorbereitung/K_1_Datentypen_Aufgabe.ipynb` |
 
 ### Original-Aufgaben (Legacy)
 
@@ -95,7 +96,7 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 
 **Struktur-Checks (Aufgaben-Notebook):**
 
-- [ ] Dateiname folgt Konvention (`{NN}_{Thema}_Aufgabe.ipynb`)
+- [ ] Dateiname folgt Konvention (`{KK}_{N}_{Thema}_Aufgabe.ipynb`)
 - [ ] Liegt im korrekten Kapitel-Ordner (`{NN}_{Story}:{Thema}/`)
 - [ ] Briefing vorhanden (Markdown, 3-5 Saetze, Fabrik-Situation)
 - [ ] Stakeholder-Dialog vorhanden (kursiv/zitiert, konkrete Aufgabe + Motivation)
@@ -124,7 +125,7 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 
 **Loesung-Checks (nur fuer `_Loesung`-Notebooks):**
 
-- [ ] Separates Loesungs-Notebook existiert (`{NN}_{Thema}_Loesung.ipynb`)
+- [ ] Separates Loesungs-Notebook existiert (`{KK}_{N}_{Thema}_Loesung.ipynb`)
 - [ ] Selber narrativer Rahmen wie Aufgabe (Briefing, Stakeholder-Dialog, Aufgabentext)
 - [ ] Vollstaendig kommentierte Musterloesung
 - [ ] Debriefing vorhanden (Stakeholder kommentiert Ergebnis)
