@@ -1,4 +1,3 @@
 -laboraufgaben einfügen
--aufgaben sollen kapitel nummer im prefix haben. zB. 1.4_Boots...
--commits sollten auf feature branch erfolgen
-
+-schere stein papier spiel anpassen
+-subfolder struktur: aufgaben, lösungen

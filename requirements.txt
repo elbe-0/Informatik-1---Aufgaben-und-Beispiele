@@ -1,0 +1,10 @@
+# Runtime dependencies
+matplotlib
+numpy
+pandas
+plotly
+qrcode[pil]
+
+# Test dependencies
+pytest>=7.0
+nbformat>=5.0
