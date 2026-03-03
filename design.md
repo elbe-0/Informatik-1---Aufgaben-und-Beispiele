@@ -461,12 +461,12 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 5.1 | Roboterarm-Fehler | `05_1_Roboterarm_Fehler` | [ ] | [ ] | [ ] |
-| 5.2 | Ablaufverfolgung | `05_2_Ablaufverfolgung` | [ ] | [ ] | [ ] |
-| 5.3 | Materialkalkulator 2.0 | `05_3_Materialkalkulator_2_0` | [ ] | [ ] | [ ] |
-| 5.4 | Fehlercodes entschluesseln | `05_4_Fehlercodes_entschluesseln` | [ ] | [ ] | [ ] |
-| 5.5 | Schichtprotokoll | `05_5_Schichtprotokoll` | [ ] | [ ] | [ ] |
-| 5.6 | Mysterioeser Bug | `05_6_Mysterioeser_Bug` | [ ] | [ ] | [ ] |
+| 5.1 | Roboterarm-Fehler | `05_1_Roboterarm_Fehler` | [x] | [x] | [x] |
+| 5.2 | Ablaufverfolgung | `05_2_Ablaufverfolgung` | [x] | [x] | [x] |
+| 5.3 | Materialkalkulator 2.0 | `05_3_Materialkalkulator_2_0` | [x] | [x] | [x] |
+| 5.4 | Fehlercodes entschluesseln | `05_4_Fehlercodes_entschluesseln` | [x] | [x] | [x] |
+| 5.5 | Schichtprotokoll | `05_5_Schichtprotokoll` | [x] | [x] | [x] |
+| 5.6 | Mysterioeser Bug | `05_6_Mysterioeser_Bug` | [x] | [x] | [x] |
 
 ### Kapitel 6: Investoren-Pitch (5 Aufgaben)
 
