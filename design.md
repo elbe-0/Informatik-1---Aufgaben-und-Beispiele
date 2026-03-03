@@ -45,23 +45,24 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/`
 - `Klausurvorbereitung/`
 
-**Dateinamen:** `{NN}_{Thema}.ipynb` (Aufgabe) bzw. `{NN}_{Thema}_Lsg.ipynb` (Loesung).
+**Dateinamen:** `{NN}_{Thema}_Aufgabe.ipynb` bzw. `{NN}_{Thema}_Loesung.ipynb`.
 
 - `NN` = zweistellige laufende Nummer innerhalb des Kapitels (01, 02, ... 12)
-- `Thema` = Kurzbezeichnung der Aufgabe in Snake_Case, analog zur alten Dateistruktur
+- `Thema` = Kurzbezeichnung der Aufgabe in Snake_Case
+- `_Aufgabe` / `_Loesung` als Suffix (sortiert alphabetisch korrekt: A vor L)
 
 **Beispiele:**
 
 | Aufgabe | Dateiname |
 |---|---|
-| 1.1 | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz.ipynb` |
-| 1.1 Lsg | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz_Lsg.ipynb` |
-| 2.5 | `02_Fehlkalibrierung:Variablen_Datentypen/05_Werkzeugkasten.ipynb` |
-| 3.6 | `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/06_Materialkalkulator.ipynb` |
-| 4.8 | `04_Lagerchaos:Strings_Listen/08_NumPy_Sensor_Matrix.ipynb` |
-| 5.3 | `05_Code_Review:Funktionale_Programmierung/03_Materialkalkulator_2_0.ipynb` |
-| 6.4 | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/04_Investor_Dashboard_Plotly.ipynb` |
-| K-1 | `Klausurvorbereitung/01_Datentypen.ipynb` |
+| 1.1 Aufgabe | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz_Aufgabe.ipynb` |
+| 1.1 Loesung | `01_Blackout:Einfuehrung_IDE/01_Bootsequenz_Loesung.ipynb` |
+| 2.5 Aufgabe | `02_Fehlkalibrierung:Variablen_Datentypen/05_Werkzeugkasten_Aufgabe.ipynb` |
+| 3.6 Aufgabe | `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/06_Materialkalkulator_Aufgabe.ipynb` |
+| 4.8 Aufgabe | `04_Lagerchaos:Strings_Listen/08_NumPy_Sensor_Matrix_Aufgabe.ipynb` |
+| 5.3 Aufgabe | `05_Code_Review:Funktionale_Programmierung/03_Materialkalkulator_2_0_Aufgabe.ipynb` |
+| 6.4 Aufgabe | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/04_Investor_Dashboard_Plotly_Aufgabe.ipynb` |
+| K-1 Aufgabe | `Klausurvorbereitung/01_Datentypen_Aufgabe.ipynb` |
 
 ### Original-Aufgaben (Legacy)
 
@@ -93,7 +94,7 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 
 **Struktur-Checks (Aufgaben-Notebook):**
 
-- [ ] Dateiname folgt Konvention (`{NN}_{Thema}.ipynb`)
+- [ ] Dateiname folgt Konvention (`{NN}_{Thema}_Aufgabe.ipynb`)
 - [ ] Liegt im korrekten Kapitel-Ordner (`{NN}_{Story}:{Thema}/`)
 - [ ] Briefing vorhanden (Markdown, 3-5 Saetze, Fabrik-Situation)
 - [ ] Stakeholder-Dialog vorhanden (kursiv/zitiert, konkrete Aufgabe + Motivation)
@@ -113,7 +114,7 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 
 **Loesung-Checks (nur fuer `_Lsg`-Notebooks):**
 
-- [ ] Separates Loesungs-Notebook existiert (`{NN}_{Thema}_Lsg.ipynb`)
+- [ ] Separates Loesungs-Notebook existiert (`{NN}_{Thema}_Loesung.ipynb`)
 - [ ] Selber narrativer Rahmen wie Aufgabe (Briefing, Stakeholder-Dialog, Aufgabentext)
 - [ ] Vollstaendig kommentierte Musterloesung
 - [ ] Debriefing vorhanden (Stakeholder kommentiert Ergebnis)
