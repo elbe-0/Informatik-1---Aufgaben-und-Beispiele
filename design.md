@@ -431,31 +431,31 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 3.1 | Fabrikzugangssystem | `03_1_Fabrikzugangssystem` | [ ] | [ ] | [ ] |
-| 3.2 | Seriennummer-Pruefung | `03_2_Seriennummer_Pruefung` | [ ] | [ ] | [ ] |
-| 3.3 | Fehldiagnose Sortiermaschine | `03_3_Fehldiagnose_Sortiermaschine` | [ ] | [ ] | [ ] |
-| 3.4 | Roboterarm-Steuerung | `03_4_Roboterarm_Steuerung` | [ ] | [ ] | [ ] |
-| 3.5 | Diagnose-Automat | `03_5_Diagnose_Automat` | [ ] | [ ] | [ ] |
-| 3.6 | Materialkalkulator | `03_6_Materialkalkulator` | [ ] | [ ] | [ ] |
-| 3.7 | Werkzeug-Duell | `03_7_Werkzeug_Duell` | [ ] | [ ] | [ ] |
-| 3.8 | Fliessband-Steuerung | `03_8_Fliessband_Steuerung` | [ ] | [ ] | [ ] |
-| 3.9 | Schichtplanung | `03_9_Schichtplanung` | [ ] | [ ] | [ ] |
-| 3.10 | Halbierungsmaschine | `03_10_Halbierungsmaschine` | [ ] | [ ] | [ ] |
-| 3.11 | Ruecklagen-Rechner | `03_11_Ruecklagen_Rechner` | [ ] | [ ] | [ ] |
-| 3.12 | Notfall-Patch | `03_12_Notfall_Patch` | [ ] | [ ] | [ ] |
+| 3.1 | Fabrikzugangssystem | `03_1_Fabrikzugangssystem` | [x] | [x] | [x] |
+| 3.2 | Seriennummer-Pruefung | `03_2_Seriennummer_Pruefung` | [x] | [x] | [x] |
+| 3.3 | Fehldiagnose Sortiermaschine | `03_3_Fehldiagnose_Sortiermaschine` | [x] | [x] | [x] |
+| 3.4 | Roboterarm-Steuerung | `03_4_Roboterarm_Steuerung` | [x] | [x] | [x] |
+| 3.5 | Diagnose-Automat | `03_5_Diagnose_Automat` | [x] | [x] | [x] |
+| 3.6 | Materialkalkulator | `03_6_Materialkalkulator` | [x] | [x] | [x] |
+| 3.7 | Werkzeug-Duell | `03_7_Werkzeug_Duell` | [x] | [x] | [x] |
+| 3.8 | Fliessband-Steuerung | `03_8_Fliessband_Steuerung` | [x] | [x] | [x] |
+| 3.9 | Schichtplanung | `03_9_Schichtplanung` | [x] | [x] | [x] |
+| 3.10 | Halbierungsmaschine | `03_10_Halbierungsmaschine` | [x] | [x] | [x] |
+| 3.11 | Ruecklagen-Rechner | `03_11_Ruecklagen_Rechner` | [x] | [x] | [x] |
+| 3.12 | Notfall-Patch | `03_12_Notfall_Patch` | [x] | [x] | [x] |
 
 ### Kapitel 4: Lagerchaos (8 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 4.1 | Etiketten reparieren | `04_1_Etiketten_reparieren` | [ ] | [ ] | [ ] |
-| 4.2 | Teilelager digitalisieren | `04_2_Teilelager_digitalisieren` | [ ] | [ ] | [ ] |
-| 4.3 | Teilelager bearbeiten | `04_3_Teilelager_bearbeiten` | [ ] | [ ] | [ ] |
-| 4.4 | Teilelager durchsuchen | `04_4_Teilelager_durchsuchen` | [ ] | [ ] | [ ] |
-| 4.5 | Lagerhalle Raster | `04_5_Lagerhalle_Raster` | [ ] | [ ] | [ ] |
-| 4.6 | Teil suchen | `04_6_Teil_suchen` | [ ] | [ ] | [ ] |
-| 4.7 | Teil umlagern | `04_7_Teil_umlagern` | [ ] | [ ] | [ ] |
-| 4.8 | NumPy Sensor-Matrix | `04_8_NumPy_Sensor_Matrix` | [ ] | [ ] | [ ] |
+| 4.1 | Etiketten reparieren | `04_1_Etiketten_reparieren` | [x] | [x] | [x] |
+| 4.2 | Teilelager digitalisieren | `04_2_Teilelager_digitalisieren` | [x] | [x] | [x] |
+| 4.3 | Teilelager bearbeiten | `04_3_Teilelager_bearbeiten` | [x] | [x] | [x] |
+| 4.4 | Teilelager durchsuchen | `04_4_Teilelager_durchsuchen` | [x] | [x] | [x] |
+| 4.5 | Lagerhalle Raster | `04_5_Lagerhalle_Raster` | [x] | [x] | [x] |
+| 4.6 | Teil suchen | `04_6_Teil_suchen` | [x] | [x] | [x] |
+| 4.7 | Teil umlagern | `04_7_Teil_umlagern` | [x] | [x] | [x] |
+| 4.8 | NumPy Sensor-Matrix | `04_8_NumPy_Sensor_Matrix` | [x] | [x] | [x] |
 
 ### Kapitel 5: Code-Review (6 Aufgaben)
 
