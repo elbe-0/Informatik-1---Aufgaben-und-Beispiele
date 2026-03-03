@@ -70,7 +70,8 @@ Die bisherigen Aufgaben, auf denen dieses Refactoring basiert: `/Users/ostfalia/
 
 ### Sprachkonventionen
 
-- **Sie-Form:** Alle Aufgabentexte, Hinweise und Anleitungen verwenden die hoefliche Anrede ("Schreiben Sie...", "Verwenden Sie...", nicht "Schreib..." oder "Verwende...")
+- **Korrekte Umlaute:** In allen Notebook-Inhalten (Markdown-Text, Kommentare, Ausgaben) werden echte Umlaute verwendet: ä, ö, ü, ß - NICHT ae, oe, ue, ss. Ausnahme: Dateinamen und Ordnernamen bleiben ASCII-sicher (ue, ae, oe).
+- **Sie-Form:** Alle Aufgabentexte, Hinweise und Anleitungen verwenden die höfliche Anrede ("Schreiben Sie...", "Verwenden Sie...", nicht "Schreib..." oder "Verwende...")
 - **Kein Schwierigkeitsgrad in Notebooks:** Die Schwierigkeitsangabe (1/5 etc.) dient nur der internen Planung im Design-Dokument und erscheint NICHT in den Notebooks
 
 ### Akzeptanzkriterien
@@ -110,9 +111,18 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 - [ ] Keine Konzepte verwendet die erst in spaeteren Kapiteln eingefuehrt werden
 - [ ] Sie-Form durchgehend verwendet (keine Du-Form in Aufgabentexten/Hinweisen)
 - [ ] Kein Schwierigkeitsgrad im Notebook sichtbar
+- [ ] Korrekte Umlaute (ä, ö, ü, ß) in allen Texten, Kommentaren und Ausgaben
 - [ ] Code-Zellen sind ausfuehrbar (kein `ImportError`, kein `SyntaxError`)
 
-**Loesung-Checks (nur fuer `_Lsg`-Notebooks):**
+**Legacy-Vergleich (Pflicht für jede Aufgabe):**
+
+- [ ] Original-Notebook gelesen und verglichen
+- [ ] Erklärungsqualität mindestens gleichwertig (gleich gut oder besser als Original)
+- [ ] Alle fachlichen Konzepte des Originals vollständig abgedeckt
+- [ ] Schwierigkeitsgrad und Progression vergleichbar
+- [ ] Fabrik-Kontext ist sinnvoll und nicht aufgesetzt
+
+**Loesung-Checks (nur fuer `_Loesung`-Notebooks):**
 
 - [ ] Separates Loesungs-Notebook existiert (`{NN}_{Thema}_Loesung.ipynb`)
 - [ ] Selber narrativer Rahmen wie Aufgabe (Briefing, Stakeholder-Dialog, Aufgabentext)
