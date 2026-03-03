@@ -90,7 +90,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `04_Lagerchaos:Strings_Listen/`
 - `05_Code_Review:Funktionale_Programmierung/`
 - `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/`
-- `Klausurvorbereitung/`
+
 
 **Dateinamen:** `{KK}_{N}_{Thema}_Aufgabe.ipynb` bzw. `{KK}_{N}_{Thema}_Loesung.ipynb`.
 
@@ -98,7 +98,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `N` = laufende Aufgabennummer innerhalb des Kapitels (1, 2, ... 12)
 - `Thema` = Kurzbezeichnung der Aufgabe in Snake_Case
 - `_Aufgabe` / `_Loesung` als Suffix (sortiert alphabetisch korrekt: A vor L)
-- Sonderfall Klausurvorbereitung: `K_{N}_{Thema}_Aufgabe.ipynb` (Präfix `K` statt Kapitelnummer)
+
 
 **Beispiele:**
 
@@ -111,7 +111,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 | 4.8 Aufgabe | `04_Lagerchaos:Strings_Listen/04_8_NumPy_Sensor_Matrix_Aufgabe.ipynb` |
 | 5.3 Aufgabe | `05_Code_Review:Funktionale_Programmierung/05_3_Materialkalkulator_2_0_Aufgabe.ipynb` |
 | 6.4 Aufgabe | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/06_4_Investor_Dashboard_Plotly_Aufgabe.ipynb` |
-| K-1 Aufgabe | `Klausurvorbereitung/K_1_Datentypen_Aufgabe.ipynb` |
+
 
 ### Original-Aufgaben (Legacy)
 
@@ -346,28 +346,6 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 
 ---
 
-## Klausurvorbereitung: "Die Abschlusspruefung"
-
-**Briefing:** Die Fabrik ist gerettet. Die Investoren haben unterschrieben. Wegner: *"Bevor ich euch Festvertraege anbiete, gibt es eine Abschlusspruefung. Zeigt mir dass ihr alles verstanden habt - nicht nur den Code, sondern auch die Theorie dahinter."*
-
-Alle 11 Klausuraufgaben mit vollstaendigem Mapping:
-
-| # | Original | Neu (Fabrik-Framing) | Typ |
-|---|---|---|---|
-| 1 | Was definiert ein Datentyp? Unterschied float/double | Voss: *"Erklaert mir, warum unsere Sensoren zwischen `float` und `double` unterscheiden muessen."* Datentypen im Kontext Maschinensteuerung erklaeren. | Theorie |
-| 2 | Fehler im Code finden (berechneSumme) | Notfall-Patch Teil 2: Funktion `berechneGesamtgewicht()` eines Mitarbeiters enthaelt Compiler- und Laufzeitfehler. Finden und klassifizieren. Holz: *"Schon wieder fehlerhafter Code. Findet die Bugs und sagt mir welche Kategorie."* | Debugging |
-| 3 | Definition "Algorithmus" + 4 Eigenschaften | Holz: *"Wenn ihr einen Produktionsprozess als Algorithmus beschreiben muesst - was muss der erfuellen?"* Algorithmus-Definition am Beispiel eines Fertigungsschritts. | Theorie |
-| 4 | Wie viele Werte mit 7 Bit? | Holz: *"Unser Fehlercode-Register hat 7 Bit. Wie viele verschiedene Fehlercodes koennen wir damit darstellen?"* | Theorie/Berechnung |
-| 5 | Von-Neumann-Zyklus skizzieren | Holz: *"Die neue Steuerung basiert auf Von-Neumann-Architektur. Skizziert den Zyklus."* Theoriefrage bleibt abstrakt - der Fabrikbezug ist der Anlass, nicht der Inhalt. | Theorie |
-| 6 | Warum ist `(ende != true)` redundant? Kuerzere Form | Holz zeigt Code der alten Maschinensteuerung: `while (notaus_gedrueckt != True):`. *"Das hat der Vorgaenger geschrieben. Vereinfacht das."* | Theorie/Code |
-| 7 | Programmablaufplan: Gebuehrenberechnung (gestaffelt) | Flussdiagramm: Versandkosten-Berechnung fuer MotoTec-Lieferungen. Gestaffelte Gebuehren je nach Anzahl Lieferungen pro Monat. Petri: *"Zeichnet mir den Ablauf auf. Ich will sehen wie die Staffelung funktioniert."* | Flussdiagramm |
-| 8 | Zahlensysteme: Dezimal/Binaer/Hex umrechnen (2015, F5D4hex, 10101101bin) | Maschinenregister-Werte: Holz: *"Wandelt diese Werte um - die alte Steuerung gibt dezimal aus, die neue braucht hex."* Gleiche Zahlen, Fabrik-Kontext. | Berechnung |
-| 9 | For-Schleife: Zahlen im Bereich teilbar durch 5 UND 9 | Chargen-Nummern: Finde alle Chargennummern in einem Bereich, die sowohl durch 5 als auch durch 9 teilbar sind (= Pruefchargen). Voss: *"Die Pruefchargen muessen raus. Welche Nummern sind das?"* | Programmierung |
-| 10 | Zahlenraten (Zufallszahl 1-100, "zu hoch/zu niedrig") | Fehlercode erraten: Die Maschine hat einen Fehler, der Code liegt zwischen 1 und 100. Oezdal: *"Findet den Code. Das System sagt euch ob ihr zu hoch oder zu niedrig liegt."* | Programmierung |
-| 11 | Optimierung: Rechteck-Flaeche ~75.5m², minimaler Umfang, 0.01m-Schritte | Materialzuschnitt optimieren: Eine Metallplatte soll moeglichst nah an 75.5m² sein bei minimalem Materialverschnitt (Umfang). Zwei Funktionen (Flaeche, Umfang), Iteration in 0.01m-Schritten. Petri: *"Jeder Zentimeter Verschnitt kostet Geld. Optimiert das."* | Programmierung |
-
-**Schwierigkeit:** 4-4.5/5
-
 ---
 
 ## Nicht uebernommene Inhalte
@@ -375,7 +353,7 @@ Alle 11 Klausuraufgaben mit vollstaendigem Mapping:
 | Original-Notebook | Grund |
 |---|---|
 | `Z99_PIN_eingabe.ipynb` (Kap. 5) | Fragment/Konzeptdemo zur Funktionssyntax. Wird durch die vollstaendigen Aufgaben 5.1-5.6 abgedeckt. |
-| `Getting_started_with_AAS.ipynb` (Klausurvorbereitung) | Spezialthema Asset Administration Shell (BaSyx SDK, Industry 4.0). Geht ueber den Informatik-I-Lehrplan hinaus. Kann spaeter als optionales Bonus-Notebook "MotoTec goes Digital Twin" ergaenzt werden. |
+| `Getting_started_with_AAS.ipynb` | Spezialthema Asset Administration Shell (BaSyx SDK, Industry 4.0). Geht ueber den Informatik-I-Lehrplan hinaus. |
 
 ---
 
@@ -385,11 +363,11 @@ Alle 11 Klausuraufgaben mit vollstaendigem Mapping:
 |---|---|---|---|
 | **Sandra Holz** | IT-Leiterin | Technisch versiert, fordert sauberen Code, knapp | Kap 1, 3 (IT-Security), 5, 6 |
 | **Dr. Lena Voss** | Qualitaetsmanagerin | Praezise, analytisch, duldet keine Schlamperei | Kap 2, 3 (QM), 4 (Sensoren), 6 |
-| **Tarek Oezdal** | Schichtleiter Produktion | Hands-on, ungeduldig, will dass Dinge laufen | Kap 3, Klausur |
+| **Tarek Oezdal** | Schichtleiter Produktion | Hands-on, ungeduldig, will dass Dinge laufen | Kap 3 |
 | **Juergen Brandt** | Lagerleiter | Ueberfordert, genervt ueber Chaos, aber herzlich | Kap 4 |
-| **Marco Petri** | Einkaufsleiter | Zahlenmensch, pragmatisch | Kap 3 (Material), Kap 4 (Zulieferer), Klausur |
+| **Marco Petri** | Einkaufsleiter | Zahlenmensch, pragmatisch | Kap 3 (Material), Kap 4 (Zulieferer) |
 | **Aylin Demir** | CFO / Finanzchefin | Nuechtern, ergebnisorientiert, Druck von oben | Kap 3 (Ruecklagen), Kap 6 |
-| **Thomas Wegner** | Geschaeftsfuehrer | Visionaer, motivierend, steht unter Druck | Kap 5 (Strategie), Kap 6, Klausur |
+| **Thomas Wegner** | Geschaeftsfuehrer | Visionaer, motivierend, steht unter Druck | Kap 5 (Strategie), Kap 6 |
 
 ### Stimmungsentwicklung ueber das Semester
 - **Kapitel 1-2:** Krisenmodus. Holz und Voss kaempfen um die Grundlagen. *"Keine Zeit fuer Erklaerungen."*
@@ -408,24 +386,24 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 1.1 | Bootsequenz | `01_1_Bootsequenz` | [x] | [x] | [ ] |
-| 1.2 | Stromversorgung | `01_2_Stromversorgung` | [x] | [x] | [ ] |
-| 1.3 | Statusanzeige | `01_3_Statusanzeige` | [x] | [x] | [ ] |
-| 1.4 | System-Dashboard | `01_4_System_Dashboard` | [x] | [x] | [ ] |
+| 1.1 | Bootsequenz | `01_1_Bootsequenz` | [x] | [x] | [x] |
+| 1.2 | Stromversorgung | `01_2_Stromversorgung` | [x] | [x] | [x] |
+| 1.3 | Statusanzeige | `01_3_Statusanzeige` | [x] | [x] | [x] |
+| 1.4 | System-Dashboard | `01_4_System_Dashboard` | [x] | [x] | [x] |
 
 ### Kapitel 2: Fehlkalibrierung (9 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 2.1 | Maschinendiagramm | `02_1_Maschinendiagramm` | [x] | [x] | [ ] |
-| 2.2 | Sensortypen | `02_2_Sensortypen` | [x] | [x] | [ ] |
-| 2.3 | Maschinenpass | `02_3_Maschinenpass` | [x] | [x] | [ ] |
-| 2.4 | Sensordaten reparieren | `02_4_Sensordaten_reparieren` | [x] | [x] | [ ] |
-| 2.5 | Werkzeugkasten (Demo) | `02_5_Werkzeugkasten` | [x] | [x] | [ ] |
-| 2.6 | QR-Code Maschinenetikett | `02_6_QR_Code_Maschinenetikett` | [x] | [x] | [ ] |
-| 2.7 | QR-Code Pruefpause | `02_7_QR_Code_Pruefpause` | [x] | [x] | [ ] |
-| 2.8 | QR-Code Zeitstempel | `02_8_QR_Code_Zeitstempel` | [x] | [x] | [ ] |
-| 2.9 | Stresstest | `02_9_Stresstest` | [x] | [x] | [ ] |
+| 2.1 | Maschinendiagramm | `02_1_Maschinendiagramm` | [x] | [x] | [x] |
+| 2.2 | Sensortypen | `02_2_Sensortypen` | [x] | [x] | [x] |
+| 2.3 | Maschinenpass | `02_3_Maschinenpass` | [x] | [x] | [x] |
+| 2.4 | Sensordaten reparieren | `02_4_Sensordaten_reparieren` | [x] | [x] | [x] |
+| 2.5 | Werkzeugkasten (Demo) | `02_5_Werkzeugkasten` | [x] | [x] | [x] |
+| 2.6 | QR-Code Maschinenetikett | `02_6_QR_Code_Maschinenetikett` | [x] | [x] | [x] |
+| 2.7 | QR-Code Pruefpause | `02_7_QR_Code_Pruefpause` | [x] | [x] | [x] |
+| 2.8 | QR-Code Zeitstempel | `02_8_QR_Code_Zeitstempel` | [x] | [x] | [x] |
+| 2.9 | Stresstest | `02_9_Stresstest` | [x] | [x] | [x] |
 
 ### Kapitel 3: Fertigungsstrasse (12 Aufgaben)
 
@@ -472,27 +450,11 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 6.1 | Qualitaetsbericht | `06_1_Qualitaetsbericht` | [ ] | [ ] | [ ] |
-| 6.2 | Notfall-Kodierung | `06_2_Notfall_Kodierung` | [ ] | [ ] | [ ] |
-| 6.3 | Produktionsdaten Pandas | `06_3_Produktionsdaten_Pandas` | [ ] | [ ] | [ ] |
-| 6.4 | Investor-Dashboard Plotly | `06_4_Investor_Dashboard_Plotly` | [ ] | [ ] | [ ] |
-| 6.5 | Produktions-Dashboard | `06_5_Produktions_Dashboard` | [ ] | [ ] | [ ] |
-
-### Klausurvorbereitung (11 Aufgaben)
-
-| # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
-|---|---|---|---|---|---|
-| K-1 | Datentypen | `K_1_Datentypen` | [ ] | [ ] | [ ] |
-| K-2 | Fehler finden | `K_2_Fehler_finden` | [ ] | [ ] | [ ] |
-| K-3 | Algorithmus | `K_3_Algorithmus` | [ ] | [ ] | [ ] |
-| K-4 | Bitkodierung | `K_4_Bitkodierung` | [ ] | [ ] | [ ] |
-| K-5 | Von-Neumann | `K_5_Von_Neumann` | [ ] | [ ] | [ ] |
-| K-6 | Redundante Bedingung | `K_6_Redundante_Bedingung` | [ ] | [ ] | [ ] |
-| K-7 | Flussdiagramm | `K_7_Flussdiagramm` | [ ] | [ ] | [ ] |
-| K-8 | Zahlensysteme | `K_8_Zahlensysteme` | [ ] | [ ] | [ ] |
-| K-9 | Chargen-Nummern | `K_9_Chargen_Nummern` | [ ] | [ ] | [ ] |
-| K-10 | Fehlercode erraten | `K_10_Fehlercode_erraten` | [ ] | [ ] | [ ] |
-| K-11 | Materialzuschnitt | `K_11_Materialzuschnitt` | [ ] | [ ] | [ ] |
+| 6.1 | Qualitaetsbericht | `06_1_Qualitaetsbericht` | [x] | [x] | [x] |
+| 6.2 | Notfall-Kodierung | `06_2_Notfall_Kodierung` | [x] | [x] | [x] |
+| 6.3 | Produktionsdaten Pandas | `06_3_Produktionsdaten_Pandas` | [x] | [x] | [x] |
+| 6.4 | Investor-Dashboard Plotly | `06_4_Investor_Dashboard_Plotly` | [x] | [x] | [x] |
+| 6.5 | Produktions-Dashboard | `06_5_Produktions_Dashboard` | [x] | [x] | [x] |
 
 ---
 
