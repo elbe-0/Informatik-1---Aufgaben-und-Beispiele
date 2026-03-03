@@ -11,17 +11,28 @@ Die Studierenden sind IT-Notfallteam der **MotoTec GmbH**, einer Autofabrik nach
 **Aufgaben-Notebook:**
 1. **Briefing** (Markdown, 3-5 Saetze): Lage in der Fabrik
 2. **Stakeholder-Dialog** (kursiv/zitiert): Konkrete Aufgabe und Motivation
-3. **Beispiele** (falls im Original vorhanden): Lauffähige Code-Beispiele im Fabrik-Kontext, die die neuen Konzepte vor der Aufgabe demonstrieren. Werden aus dem Legacy-Notebook übernommen und an den MotoTec-Kontext angepasst. Studierende führen diese Zellen aus und sehen das Ergebnis, bevor sie selbst Code schreiben.
-4. **Aufgabe**: Programmieraufgabe im Fabrik-Kontext
+3. **Beispiele** (falls im Original vorhanden): Lauffähige Code-Beispiele im Fabrik-Kontext, die die **Syntax/Werkzeuge** vor der Aufgabe demonstrieren. Werden aus dem Legacy-Notebook übernommen und an den MotoTec-Kontext angepasst. Studierende führen diese Zellen aus und sehen das Ergebnis, bevor sie selbst Code schreiben. **Wichtig:** Beispiele duerfen NICHT die konzeptuelle Erkenntnis (Aha-Moment) vorwegnehmen, die die Aufgabe vermitteln soll.
+4. **Aufgabe**: Programmieraufgabe im Fabrik-Kontext (OHNE Hinweise im Aufgabentext)
 5. **Leere Code-Zelle**: Platz fuer die Loesung der Studierenden
+6. **Hilfestellung** (optional, klappbar): Nur wenn die Aufgabe Befehle benoetigt, die nicht in den Beispielen eingefuehrt wurden. Minimale Hinweise ohne Loesungsweg. Format:
+   ```html
+   <details>
+   <summary>Hilfestellung</summary>
+
+   - Minimaler Hinweis (z.B. Befehlsname, nicht Loesungsweg)
+
+   </details>
+   ```
 
 **Loesungs-Notebook (`_Loesung`):**
 1. **Briefing** (identisch zur Aufgabe)
 2. **Stakeholder-Dialog** (identisch zur Aufgabe)
 3. **Beispiele** (identisch zur Aufgabe, falls vorhanden)
-4. **Aufgabe** (identisch zur Aufgabe)
+4. **Aufgabe** (identisch zur Aufgabe, OHNE Hinweise)
 5. **Loesungscode**: Vollstaendig kommentierte Musterloesung
 6. **Debriefing** (nur hier, nicht in der Aufgabe): Der Stakeholder kommentiert das Ergebnis
+
+**Hinweis:** Das Loesungs-Notebook enthaelt KEINE klappbare Hinweise-Sektion (die Loesung selbst ist die Hilfestellung).
 
 ### Format
 
@@ -72,6 +83,15 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 
 Die bisherigen Aufgaben, auf denen dieses Refactoring basiert: `/Users/ostfalia/vs-code/Informatik-I----Python-Beispiele/`
 
+### Didaktik-Konvention: Entdeckendes Lernen
+
+**Grundprinzip:** Studierende sollen Probleme selbst entdecken, mit Nachbarn diskutieren und eigene Loesungsansaetze entwickeln. Keine Hinweise, die den Loesungsweg vorwegnehmen.
+
+- **Beispiele** vor der Aufgabe duerfen nur **Syntax** demonstrieren (wie benutzt man einen Befehl?), aber NICHT die konzeptuelle Erkenntnis vorwegnehmen, die die Aufgabe vermitteln soll
+- **Keine Hinweise-Sektion** im Normalfall. Die Aufgabenstellung selbst muss klar genug sein
+- **Ausnahme:** Wenn die Aufgabe Befehle oder Konzepte benoetigt, die noch nicht in den Beispielen eingefuehrt wurden, kann eine **minimale** klappbare Hinweise-Sektion (`<details>`) am Ende stehen. Diese nennt nur den Befehlsnamen (z.B. "Schauen Sie sich `int()` an"), aber NICHT den Loesungsweg (nicht: "`int()` wandelt den String in eine Ganzzahl um")
+- **Nie** im Aufgabentext selbst Hinweise einbauen - der Aufgabentext beschreibt nur WAS zu tun ist
+
 ### Sprachkonventionen
 
 - **Korrekte Umlaute:** In allen Notebook-Inhalten (Markdown-Text, Kommentare, Ausgaben) werden echte Umlaute verwendet: ä, ö, ü, ß - NICHT ae, oe, ue, ss. Ausnahme: Dateinamen und Ordnernamen bleiben ASCII-sicher (ue, ae, oe).
@@ -106,6 +126,9 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 - [ ] Beispiele vorhanden (falls im Original lauffähige Beispiele vor der Aufgabe existieren: im Fabrik-Kontext angepasst, zwischen Stakeholder-Dialog und Aufgabe)
 - [ ] Aufgabe klar formuliert (Programmieraufgabe im Fabrik-Kontext)
 - [ ] Leere Code-Zelle mit Scaffolding-Kommentaren
+- [ ] Hilfestellung nur als klappbare `<details>`-Sektion am Ende (falls ueberhaupt noetig)
+- [ ] KEINE Hinweise inline im Aufgabentext
+- [ ] Beispiele spoilern NICHT den Aha-Moment der Aufgabe
 - [ ] KEIN Debriefing (Debriefing gehoert nur in die Loesung)
 
 **Inhalts-Checks:**
@@ -341,24 +364,24 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 1.1 | Bootsequenz | `01_1_Bootsequenz` | [ ] | [ ] | [ ] |
-| 1.2 | Stromversorgung | `01_2_Stromversorgung` | [ ] | [ ] | [ ] |
-| 1.3 | Statusanzeige | `01_3_Statusanzeige` | [ ] | [ ] | [ ] |
-| 1.4 | System-Dashboard | `01_4_System_Dashboard` | [ ] | [ ] | [ ] |
+| 1.1 | Bootsequenz | `01_1_Bootsequenz` | [x] | [x] | [ ] |
+| 1.2 | Stromversorgung | `01_2_Stromversorgung` | [x] | [x] | [ ] |
+| 1.3 | Statusanzeige | `01_3_Statusanzeige` | [x] | [x] | [ ] |
+| 1.4 | System-Dashboard | `01_4_System_Dashboard` | [x] | [x] | [ ] |
 
 ### Kapitel 2: Fehlkalibrierung (9 Aufgaben)
 
 | # | Thema | Dateiname | Aufgabe | Loesung | Verifiziert |
 |---|---|---|---|---|---|
-| 2.1 | Maschinendiagramm | `02_1_Maschinendiagramm` | [ ] | [ ] | [ ] |
-| 2.2 | Sensortypen | `02_2_Sensortypen` | [ ] | [ ] | [ ] |
-| 2.3 | Maschinenpass | `02_3_Maschinenpass` | [ ] | [ ] | [ ] |
-| 2.4 | Sensordaten reparieren | `02_4_Sensordaten_reparieren` | [ ] | [ ] | [ ] |
-| 2.5 | Werkzeugkasten (Demo) | `02_5_Werkzeugkasten` | [ ] | [ ] | [ ] |
-| 2.6 | QR-Code Maschinenetikett | `02_6_QR_Code_Maschinenetikett` | [ ] | [ ] | [ ] |
-| 2.7 | QR-Code Pruefpause | `02_7_QR_Code_Pruefpause` | [ ] | [ ] | [ ] |
-| 2.8 | QR-Code Zeitstempel | `02_8_QR_Code_Zeitstempel` | [ ] | [ ] | [ ] |
-| 2.9 | Stresstest | `02_9_Stresstest` | [ ] | [ ] | [ ] |
+| 2.1 | Maschinendiagramm | `02_1_Maschinendiagramm` | [x] | [x] | [ ] |
+| 2.2 | Sensortypen | `02_2_Sensortypen` | [x] | [x] | [ ] |
+| 2.3 | Maschinenpass | `02_3_Maschinenpass` | [x] | [x] | [ ] |
+| 2.4 | Sensordaten reparieren | `02_4_Sensordaten_reparieren` | [x] | [x] | [ ] |
+| 2.5 | Werkzeugkasten (Demo) | `02_5_Werkzeugkasten` | [x] | [x] | [ ] |
+| 2.6 | QR-Code Maschinenetikett | `02_6_QR_Code_Maschinenetikett` | [x] | [x] | [ ] |
+| 2.7 | QR-Code Pruefpause | `02_7_QR_Code_Pruefpause` | [x] | [x] | [ ] |
+| 2.8 | QR-Code Zeitstempel | `02_8_QR_Code_Zeitstempel` | [x] | [x] | [ ] |
+| 2.9 | Stresstest | `02_9_Stresstest` | [x] | [x] | [ ] |
 
 ### Kapitel 3: Fertigungsstrasse (12 Aufgaben)
 
