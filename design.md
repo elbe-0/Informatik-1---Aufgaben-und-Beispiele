@@ -10,7 +10,12 @@ Die Studierenden sind IT-Notfallteam der **MotoTec GmbH**, einer Autofabrik nach
 
 **Aufgaben-Notebook:**
 1. **Briefing** (Markdown, 3-5 Saetze): Lage in der Fabrik
-2. **Stakeholder-Dialog** (kursiv/zitiert): Konkrete Aufgabe und Motivation
+2. **Stakeholder-Dialog**: Kursive Szenen-Beschreibung + kursives Blockzitat. Format:
+   ```markdown
+   *Tarek Özdal steht mit verschränkten Armen vor dem Roboterarm:*
+
+   > *"Zitat des Stakeholders hier."*
+   ```
 3. **Beispiele** (falls im Original vorhanden): Lauffähige Code-Beispiele im Fabrik-Kontext, die die **Syntax/Werkzeuge** vor der Aufgabe demonstrieren. Werden aus dem Legacy-Notebook übernommen und an den MotoTec-Kontext angepasst. Studierende führen diese Zellen aus und sehen das Ergebnis, bevor sie selbst Code schreiben. **Wichtig:** Beispiele duerfen NICHT die konzeptuelle Erkenntnis (Aha-Moment) vorwegnehmen, die die Aufgabe vermitteln soll.
 4. **Aufgabe**: Programmieraufgabe im Fabrik-Kontext (OHNE Hinweise im Aufgabentext)
 5. **Leere Code-Zelle**: Platz fuer die Loesung der Studierenden
@@ -29,14 +34,43 @@ Die Studierenden sind IT-Notfallteam der **MotoTec GmbH**, einer Autofabrik nach
 2. **Stakeholder-Dialog** (identisch zur Aufgabe)
 3. **Beispiele** (identisch zur Aufgabe, falls vorhanden)
 4. **Aufgabe** (identisch zur Aufgabe, OHNE Hinweise)
-5. **Loesungscode**: Vollstaendig kommentierte Musterloesung
-6. **Debriefing** (nur hier, nicht in der Aufgabe): Der Stakeholder kommentiert das Ergebnis
+5. **Loesungscode**: Vollstaendig kommentierte Musterloesung. Jede Teilaufgabe wird mit einem `# === Aufgabe (x): Beschreibung ===` Kommentar-Header markiert.
+6. **Debriefing** (nur hier, nicht in der Aufgabe): Der Stakeholder kommentiert das Ergebnis. **Gleiches Format wie Stakeholder-Dialog:**
+   ```markdown
+   *Tarek Özdal lehnt sich zufrieden zurück:*
+
+   > *"Zitat des Stakeholders hier."*
+   ```
 
 **Hinweis:** Das Loesungs-Notebook enthaelt KEINE klappbare Hinweise-Sektion (die Loesung selbst ist die Hilfestellung).
 
 ### Format
 
 Alle Aufgaben, Beispiele und Loesungen werden als **Jupyter Notebooks (.ipynb)** erstellt - identisch zum bestehenden Format.
+
+### Technische Notebook-Konventionen
+
+**Titel-Zelle (Cell 0):** Jedes Notebook beginnt mit einer Markdown-Zelle im exakten Format:
+```markdown
+# Aufgabe X.Y: Name
+
+**Modul:** Informatik I - Mission MotoTec
+**Thema:** `concept1`, `concept2`
+```
+- Loesungs-Notebooks: `# Aufgabe X.Y: Name (Lösung)` - mit echtem Umlaut ö, NICHT `(Loesung)`
+- Die Modul-Zeile MUSS mit zwei Leerzeichen vor dem Zeilenumbruch enden (`MotoTec  \n`), damit Modul und Thema auf separaten Zeilen gerendert werden
+
+**JSON-Struktur:**
+- `nbformat`: 4, `nbformat_minor`: 4
+- `kernelspec`: `{"display_name": "Python 3", "language": "python", "name": "python3"}`
+- `language_info.version`: `"3.12.0"` (einheitlich fuer alle Notebooks)
+- Alle Code-Zellen: `"execution_count": null`, `"outputs": []`, `"metadata": {}`
+- Alle Markdown-Zellen: `"metadata": {}`
+- `source`-Felder MUESSEN immer als **Liste von Strings** gespeichert werden (nie als einzelner String)
+
+**Aufgabe/Loesung-Konsistenz:**
+- Alle geteilten Zellen (Briefing, Stakeholder-Dialog, Beispiele, Aufgabentext) muessen **byte-identisch** zwischen Aufgabe und Loesung sein - einziger Unterschied ist die Titel-Zelle (`(Lösung)` Suffix) und die Loesung-spezifischen Zellen (Loesungscode + Debriefing statt Scaffold + Hilfestellung)
+- Loesungscode-Zellen verwenden `# === Aufgabe (x): Beschreibung ===` als Header-Kommentare (mit dem Wort "Aufgabe" im Header)
 
 ### Loesungs-Notebooks
 
@@ -121,11 +155,12 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 
 - [ ] Dateiname folgt Konvention (`{KK}_{N}_{Thema}_Aufgabe.ipynb`)
 - [ ] Liegt im korrekten Kapitel-Ordner (`{KK}_{Story}:{Thema}/`)
+- [ ] Titel-Zelle: `# Aufgabe X.Y: Name` mit korrektem Modul/Thema-Format (zwei Leerzeichen vor `\n` auf Modul-Zeile)
 - [ ] Briefing vorhanden (Markdown, 3-5 Saetze, Fabrik-Situation)
-- [ ] Stakeholder-Dialog vorhanden (kursiv/zitiert, konkrete Aufgabe + Motivation)
+- [ ] Stakeholder-Dialog vorhanden (kursive Szene + kursives Blockzitat, siehe Format oben)
 - [ ] Beispiele vorhanden (falls im Original lauffähige Beispiele vor der Aufgabe existieren: im Fabrik-Kontext angepasst, zwischen Stakeholder-Dialog und Aufgabe)
 - [ ] Aufgabe klar formuliert (Programmieraufgabe im Fabrik-Kontext)
-- [ ] Leere Code-Zelle mit Scaffolding-Kommentaren
+- [ ] Leere Code-Zelle mit Scaffolding-Kommentaren (`# (a) ...`, `# (b) ...` etc.)
 - [ ] Hilfestellung nur als klappbare `<details>`-Sektion am Ende (falls ueberhaupt noetig)
 - [ ] KEINE Hinweise inline im Aufgabentext
 - [ ] Beispiele spoilern NICHT den Aha-Moment der Aufgabe
@@ -154,10 +189,19 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 **Loesung-Checks (nur fuer `_Loesung`-Notebooks):**
 
 - [ ] Separates Loesungs-Notebook existiert (`{KK}_{N}_{Thema}_Loesung.ipynb`)
-- [ ] Selber narrativer Rahmen wie Aufgabe (Briefing, Stakeholder-Dialog, Aufgabentext)
+- [ ] Titel: `# Aufgabe X.Y: Name (Lösung)` - mit echtem Umlaut ö, NICHT `(Loesung)`
+- [ ] Geteilte Zellen (Briefing, Dialog, Beispiele, Aufgabentext) sind **byte-identisch** zur Aufgabe
+- [ ] Loesungscode-Zellen verwenden `# === Aufgabe (x): Beschreibung ===` Header-Kommentare
 - [ ] Vollstaendig kommentierte Musterloesung
-- [ ] Debriefing vorhanden (Stakeholder kommentiert Ergebnis)
+- [ ] Debriefing vorhanden (kursive Szene + kursives Blockzitat, gleiches Format wie Stakeholder-Dialog)
 - [ ] Loesung ist korrekt und laeuft fehlerfrei
+
+**Technische Checks (alle Notebooks):**
+
+- [ ] `language_info.version` ist `"3.12.0"` (einheitlich)
+- [ ] Alle `source`-Felder sind Listen von Strings (nicht einzelne Strings)
+- [ ] Alle Code-Zellen: `execution_count: null`, `outputs: []`
+- [ ] Modul-Zeile in Titel-Zelle endet mit `  \n` (zwei Leerzeichen + Newline)
 
 ---
 
