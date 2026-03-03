@@ -8,10 +8,18 @@ Die Studierenden sind IT-Notfallteam der **MotoTec GmbH**, einer Autofabrik nach
 
 ### Narrative Struktur pro Notebook
 
+**Aufgaben-Notebook:**
 1. **Briefing** (Markdown, 3-5 Saetze): Lage in der Fabrik
-2. **Dialog mit dem jeweiligen Stakeholder** (kursiv/zitiert): Konkrete Aufgabe und Motivation
+2. **Stakeholder-Dialog** (kursiv/zitiert): Konkrete Aufgabe und Motivation
 3. **Aufgabe**: Programmieraufgabe im Fabrik-Kontext
-4. **Debriefing** (Pflicht): Der Stakeholder kommentiert das Ergebnis, fasst das Gelernte zusammen
+4. **Leere Code-Zelle**: Platz fuer die Loesung der Studierenden
+
+**Loesungs-Notebook (`_Lsg`):**
+1. **Briefing** (identisch zur Aufgabe)
+2. **Stakeholder-Dialog** (identisch zur Aufgabe)
+3. **Aufgabe** (identisch zur Aufgabe)
+4. **Loesungscode**: Vollstaendig kommentierte Musterloesung
+5. **Debriefing** (nur hier, nicht in der Aufgabe): Der Stakeholder kommentiert das Ergebnis
 
 ### Format
 
@@ -83,14 +91,15 @@ Jedes Notebook durchlaeuft 3 Phasen:
 
 Universelle Checkliste - gilt fuer **jedes** Notebook:
 
-**Struktur-Checks:**
+**Struktur-Checks (Aufgaben-Notebook):**
 
 - [ ] Dateiname folgt Konvention (`{NN}_{Thema}.ipynb`)
 - [ ] Liegt im korrekten Kapitel-Ordner (`{NN}_{Story}:{Thema}/`)
 - [ ] Briefing vorhanden (Markdown, 3-5 Saetze, Fabrik-Situation)
 - [ ] Stakeholder-Dialog vorhanden (kursiv/zitiert, konkrete Aufgabe + Motivation)
 - [ ] Aufgabe klar formuliert (Programmieraufgabe im Fabrik-Kontext)
-- [ ] Debriefing vorhanden (Stakeholder kommentiert Ergebnis, fasst Gelerntes zusammen)
+- [ ] Leere Code-Zelle mit Scaffolding-Kommentaren
+- [ ] KEIN Debriefing (Debriefing gehoert nur in die Loesung)
 
 **Inhalts-Checks:**
 
@@ -105,8 +114,9 @@ Universelle Checkliste - gilt fuer **jedes** Notebook:
 **Loesung-Checks (nur fuer `_Lsg`-Notebooks):**
 
 - [ ] Separates Loesungs-Notebook existiert (`{NN}_{Thema}_Lsg.ipynb`)
-- [ ] Selber narrativer Rahmen wie Aufgabe (Briefing, Stakeholder-Dialog)
+- [ ] Selber narrativer Rahmen wie Aufgabe (Briefing, Stakeholder-Dialog, Aufgabentext)
 - [ ] Vollstaendig kommentierte Musterloesung
+- [ ] Debriefing vorhanden (Stakeholder kommentiert Ergebnis)
 - [ ] Loesung ist korrekt und laeuft fehlerfrei
 
 ---
