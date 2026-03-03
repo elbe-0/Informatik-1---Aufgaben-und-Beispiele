@@ -82,7 +82,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 
 ### Dateinamen-Konvention
 
-**Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `{KK}_{Story}:{Thema}/`:
+**Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `{KK}_{Story}:{Thema}/`. Jeder Kapitel-Ordner enthaelt die Unterordner `Aufgaben/` und `Loesungen/`. Falls Datendateien benoetigt werden, liegen diese in einem `Daten/`-Unterordner:
 
 - `01_Blackout:Einfuehrung_IDE/`
 - `02_Fehlkalibrierung:Variablen_Datentypen/`
@@ -91,6 +91,16 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `05_Code_Review:Funktionale_Programmierung/`
 - `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/`
 
+Jeder Kapitel-Ordner hat folgende Struktur:
+```
+{KK}_{Story}:{Thema}/
+├── Aufgaben/
+│   └── {KK}_{N}_{Thema}_Aufgabe.ipynb
+├── Loesungen/
+│   └── {KK}_{N}_{Thema}_Loesung.ipynb
+└── Daten/          (nur falls Datendateien benoetigt werden)
+    └── datei.csv
+```
 
 **Dateinamen:** `{KK}_{N}_{Thema}_Aufgabe.ipynb` bzw. `{KK}_{N}_{Thema}_Loesung.ipynb`.
 
@@ -98,18 +108,18 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 - `N` = laufende Aufgabennummer innerhalb des Kapitels (1, 2, ... 12)
 - `Thema` = Kurzbezeichnung der Aufgabe in Snake_Case
 - `_Aufgabe` / `_Loesung` als Suffix (sortiert alphabetisch korrekt: A vor L)
-
+- Datendateien werden in Notebooks mit `../Daten/dateiname` referenziert
 
 **Beispiele:**
 
 | Aufgabe | Dateiname |
 |---|---|
-| 1.1 Aufgabe | `01_Blackout:Einfuehrung_IDE/01_1_Bootsequenz_Aufgabe.ipynb` |
-| 1.1 Loesung | `01_Blackout:Einfuehrung_IDE/01_1_Bootsequenz_Loesung.ipynb` |
-| 2.5 Aufgabe | `02_Fehlkalibrierung:Variablen_Datentypen/02_5_Werkzeugkasten_Aufgabe.ipynb` |
-| 3.6 Aufgabe | `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/03_6_Materialkalkulator_Aufgabe.ipynb` |
-| 4.8 Aufgabe | `04_Lagerchaos:Strings_Listen/04_8_NumPy_Sensor_Matrix_Aufgabe.ipynb` |
-| 5.3 Aufgabe | `05_Code_Review:Funktionale_Programmierung/05_3_Materialkalkulator_2_0_Aufgabe.ipynb` |
+| 1.1 Aufgabe | `.../01_Blackout:.../Aufgaben/01_1_Bootsequenz_Aufgabe.ipynb` |
+| 1.1 Loesung | `.../01_Blackout:.../Loesungen/01_1_Bootsequenz_Loesung.ipynb` |
+| 2.5 Aufgabe | `.../02_Fehlkalibrierung:.../Aufgaben/02_5_Werkzeugkasten_Aufgabe.ipynb` |
+| 3.6 Aufgabe | `.../03_Fertigungsstrasse:.../Aufgaben/03_6_Materialkalkulator_Aufgabe.ipynb` |
+| 6.3 Aufgabe | `.../06_Investoren_Pitch:.../Aufgaben/06_3_Produktionsdaten_Pandas_Aufgabe.ipynb` |
+| 6.3 Daten   | `.../06_Investoren_Pitch:.../Daten/autos.csv` |
 | 6.4 Aufgabe | `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/06_4_Investor_Dashboard_Plotly_Aufgabe.ipynb` |
 
 
@@ -463,6 +473,8 @@ Legende: `[ ]` = offen, `[x]` = erledigt
 - `qrcode[pil]` (pip install) - fuer Aufgabe 2.6-2.8 (QR-Code-Generierung)
 
 ## Bestehende Dateien die wiederverwendet werden
+
+Alle Datendateien liegen in `06_Investoren_Pitch:Dateien_Pandas_Visualisierung/Daten/`:
 
 - `autos.csv` -> Produktionsdaten der MotoTec GmbH (1000 Fahrzeuge: Marke, Modell, Baujahr, Verbrauch, CO2)
 - `sales.csv` -> Verkaufsdaten der MotoTec-Fahrzeuge (Menge, Umsatz, Stadt)

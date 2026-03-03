@@ -1,3 +1,4 @@
 -laboraufgaben einfügen
 -schere stein papier spiel anpassen
 -subfolder struktur: aufgaben, lösungen
+-bei 3.1 entspricht while true eher best practice oder?
