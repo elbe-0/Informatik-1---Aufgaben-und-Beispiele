@@ -15,8 +15,8 @@
 |-----|----------|
 | 2.1 Maschinendiagramm | Auskommentieren, Dokumentation |
 | 2.2 Sensortypen | Datentyp ändert sich |
-| 2.3 Maschinenpass | Variablen-Beispiele |
-| 2.4 Sensordaten reparieren | Explizite Typumwandlung |
+| 2.3 Maschinenpass (Optional) | Variablen-Beispiele |
+| 2.4 Sensordaten reparieren (Optional) | Explizite Typumwandlung |
 | 2.5 Werkzeugkasten (Demo) | Bibliotheken: math, random, time (Demo) |
 | 2.6 QR-Code Maschinenetikett | **Neu** |
 | 2.7 QR-Code Prüfpause | **Neu** |

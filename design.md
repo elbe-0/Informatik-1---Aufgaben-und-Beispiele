@@ -85,7 +85,7 @@ Fuer jede Aufgabe wird ein separates Loesungs-Notebook im Fabrik-Kontext erstell
 **Ordnerstruktur:** Ein Ordner pro Kapitel, benannt nach Schema `{KK}_{Story}:{Thema}/`. Jeder Kapitel-Ordner enthaelt die Unterordner `Aufgaben/` und `Loesungen/`. Falls Datendateien benoetigt werden, liegen diese in einem `Daten/`-Unterordner:
 
 - `01_Blackout:Einfuehrung_IDE/`
-- `02_Fehlkalibrierung:Variablen_Datentypen/`
+- `02_Fehlkalibrierung:Variablen_Datentypen_Bibliotheken/`
 - `03_Fertigungsstrasse:Operatoren_Kontrollstrukturen/`
 - `04_Lagerchaos:Strings_Listen/`
 - `05_Code_Review:Funktionale_Programmierung/`
@@ -116,7 +116,7 @@ Jeder Kapitel-Ordner hat folgende Struktur:
 |---|---|
 | 1.1 Aufgabe | `.../01_Blackout:.../Aufgaben/01_1_Bootsequenz_Aufgabe.ipynb` |
 | 1.1 Loesung | `.../01_Blackout:.../Loesungen/01_1_Bootsequenz_Loesung.ipynb` |
-| 2.5 Aufgabe | `.../02_Fehlkalibrierung:.../Aufgaben/02_5_Werkzeugkasten_Aufgabe.ipynb` |
+| 2.5 Aufgabe | `.../02_Fehlkalibrierung:Variablen_Datentypen_Bibliotheken/Aufgaben/02_5_Werkzeugkasten_Aufgabe.ipynb` |
 | 3.6 Aufgabe | `.../03_Fertigungsstrasse:.../Aufgaben/03_6_Materialkalkulator_Aufgabe.ipynb` |
 | 6.3 Aufgabe | `.../06_Investoren_Pitch:.../Aufgaben/06_3_Produktionsdaten_Pandas_Aufgabe.ipynb` |
 | 6.3 Daten   | `.../06_Investoren_Pitch:.../Daten/autos.csv` |
