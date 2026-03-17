@@ -6,3 +6,9 @@ __pycache__/
 dist/
 build/
 .venv/
+
+# Projektinterne Notizen
+design.md
+mapping.md
+to-do.md
+CLAUDE.md
